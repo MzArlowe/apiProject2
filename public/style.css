@@ -1,0 +1,49 @@
+.d-flex {
+    border: solid white;
+    padding: 10%;
+    margin: 20px;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+body {
+    background-image: url(https://64.media.tumblr.com/cb776d9eb51a4f5c7d41717051a7aa4f/00fdf807814f3c27-10/s500x750/a801225c70f3ed7bb38cb3ba41b96c6a4df6b283.gifv);
+    display: inline flex;
+    justify-content: space-around;
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 30px;
+    padding-top: 10px;   
+}
+
+.image_box {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid white;
+    flex-basis: content;
+}
+/* .button1 {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid white;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.20em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Roboto',sans-serif;
+   
+    }
+    .button1:hover {
+        color: black;
+        background-color:#FFFFFF;
+        opacity: 50%;
+    } */
