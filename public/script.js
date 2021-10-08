@@ -34,17 +34,19 @@ function displayResults(json) {
 
     newImage.src = json[0].url;  //this actually sends the img to the element. If you look in the console at the json, you will see how the object is numbered [0].
 
-    img.appendChild(newImage); //This is the only thing I added in your html. <div id="imagePlease"></div> This is what appends the existing element in HTML and the new one created.
+    imageBox.appendChild(newImage); 
     
     while (newImage.firstChild) {
-        newImage.removeChild(imageBox)
+        img.removeChild(newImage)
     }
 
-    picTitle.innerText = `${json[0].title}`;
-    picImage.src = json[0].hdurl;
-    picImage.alt = "Astronomy image";
-    picExplanation.innerText = `${json[0].explanation}`;
+    // picTitle.innerText = `${json[0].title}`;
+    // imageBox.src = json[0].hdurl;
+    // imageBox.alt = "Astronomy image";
+    // picExplanation.innerText = `${json[0].explanation}`;
 
-    description_box.appendChild(dtl);
-
+    // descriptionBox.appendChild(dtl);
+    // while (dtl.firstChild) {
+    //     dtl.removeChild(descriptionBox)
+    // }
 }
