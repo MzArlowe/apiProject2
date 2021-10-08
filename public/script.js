@@ -36,8 +36,8 @@ function displayResults(json) {
 
     img.appendChild(newImage); //This is the only thing I added in your html. <div id="imagePlease"></div> This is what appends the existing element in HTML and the new one created.
     
-    while (randomDate.firstChild) {
-        newImage.removeChild(img)
+    while (newImage.firstChild) {
+        newImage.removeChild(imageBox)
     }
 
     picTitle.innerText = `${json[0].title}`;
