@@ -23,7 +23,6 @@ function fetchResults() {
         }).then(function (json) {
             displayResults(json);
         })
-    // console.log(json);  //if you log this in the console, when you click the button, you will see the objects and arrays pop up!
 }
 function displayResults(json) {
     console.log(json);
@@ -32,15 +31,10 @@ function displayResults(json) {
     theImg.src = json[0].url
 
     const dtl = document.getElementById("descriptionBox");
-    dtl.innerText = json[0].url
+    dtl.innerHTML = json[0].explanation
 
-    // let picTitle = document.getElementById("picDescription");
-    
-    // img.src = json[0].url;
-    // newImage.src = json[0].url;  //this actually sends the img to the element. If you look in the console at the json, you will see how the object is numbered [0].
-    // dtl.src = json[0].url;
-    // picInfo.src = json[0].url;
-    // picTitle.src = json[0].url;
+    const picTitle = document.getElementById("imageTitle");
+    picTitle.innerHTML = json[0].title
     
     // set an image tag and change the source of that every single Time.
 
