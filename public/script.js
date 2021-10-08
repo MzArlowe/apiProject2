@@ -35,18 +35,18 @@ function displayResults(json) {
     newImage.src = json[0].url;  //this actually sends the img to the element. If you look in the console at the json, you will see how the object is numbered [0].
 
     imageBox.appendChild(newImage); 
+    imageBox.appendChild != null ? imageBox.clear("newPic") : null;
     
-    while (newImage.firstChild) {
-        img.removeChild(newImage)
+    // while(dtl.firstChild){
+    //     dtl.removeChild(descriptionBox.firstChild);
+    // }
+    while(newImage.firstChild){
+        newImage.removeChild(img.firstChild);
     }
 
-    // picTitle.innerText = `${json[0].title}`;
-    // imageBox.src = json[0].hdurl;
-    // imageBox.alt = "Astronomy image";
-    // picExplanation.innerText = `${json[0].explanation}`;
+    // picTitle.innerText = `${json[0].title}`; //stretch goal//
+    imageBox.src = json[0].hdurl;
+    imageBox.alt = "Astronomy image";
+    descriptionBox.innerText = `${json[0].explanation}`;
 
-    // descriptionBox.appendChild(dtl);
-    // while (dtl.firstChild) {
-    //     dtl.removeChild(descriptionBox)
-    // }
 }
