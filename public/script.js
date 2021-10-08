@@ -6,8 +6,8 @@ console.log(url)
 let btn = document.querySelector("button");
 
 btn.addEventListener("click", (fetchResults));
-
-fetch(url)
+//This is executing on the initial button click
+fetch(url) 
     .then(function (picInfo) {
         return picInfo.json();
     })
@@ -16,7 +16,7 @@ fetch(url)
         btn.innerText = "Click to see more!";
     })
 
-function fetchResults() {
+function fetchResults() { 
     fetch(url)
         .then(function (result) {
             return result.json();
@@ -28,25 +28,31 @@ function fetchResults() {
 function displayResults(json) {
     console.log(json);
 
-    let img = document.getElementById("imageBox")
-    let dtl = document.getElementById("descriptionBox")
-    let newImage = document.createElement('img');  //this creates the element needed to push image into it.
+    const theImg = document.getElementById("my-image");
+    theImg.src = json[0].url
 
-    newImage.src = json[0].url;  //this actually sends the img to the element. If you look in the console at the json, you will see how the object is numbered [0].
+    const dtl = document.getElementById("descriptionBox");
+    dtl.innerText = json[0].url
 
-    imageBox.appendChild(newImage); 
-    imageBox.appendChild != null ? imageBox.clear("newPic") : null;
+    // let picTitle = document.getElementById("picDescription");
     
+    // img.src = json[0].url;
+    // newImage.src = json[0].url;  //this actually sends the img to the element. If you look in the console at the json, you will see how the object is numbered [0].
+    // dtl.src = json[0].url;
+    // picInfo.src = json[0].url;
+    // picTitle.src = json[0].url;
+    
+    // set an image tag and change the source of that every single Time.
+
     // while(dtl.firstChild){
     //     dtl.removeChild(descriptionBox.firstChild);
+        
+    // while(newImage.firstChild){
+    //     newImage.removeChild(img.firstChild);
     // }
-    while(newImage.firstChild){
-        newImage.removeChild(img.firstChild);
-    }
 
     // picTitle.innerText = `${json[0].title}`; //stretch goal//
-    imageBox.src = json[0].hdurl;
-    imageBox.alt = "Astronomy image";
-    descriptionBox.innerText = `${json[0].explanation}`;
-
+    // picInfo.src = json[0].hdurl;
+    // picInfo.alt = "Astronomy image";
+    // descriptionBox.innerText = `${json[0].explanation}`;
 }
